@@ -15,9 +15,9 @@ program:
     | 
     ;
 statement:
-    expr                       { printf("%d\n", $1); }
-    | VARIABLE '=' expr        { sym[$1] = $3; printf("%d\n", $3);}
-    | PRINT '(' expr ')'       { printf("%d\n", $3);}
+    expr                       { printf("%d\n> ", $1); }
+    | VARIABLE '=' expr        { sym[$1] = $3; printf("%d\n> ", $3);}
+    | PRINT '(' expr ')'       { printf("%d\n> ", $3);}
     ;
 expr:
     INTEGER
